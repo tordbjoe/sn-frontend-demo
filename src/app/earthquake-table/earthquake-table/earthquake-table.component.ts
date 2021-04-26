@@ -29,7 +29,10 @@ export class EarthquakeTableComponent implements OnInit {
   expandedEarthquake: Earthquake | null;
   isLoading = false;
 
-  @ViewChild(MatSort, {static: true}) sort: MatSort;
+  @ViewChild(MatSort, {static: false})
+  set sort(value: MatSort) {
+    this.dataSource.sort = value;
+  }
 
   ngOnInit(): void {
     this.isLoading = true;

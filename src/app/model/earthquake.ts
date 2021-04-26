@@ -5,7 +5,7 @@ export class Earthquake {
 
   id: string;
   place: string;
-  magnitude: string;
+  magnitude: number;
   time: number;
   geometry: Geometry;
 
