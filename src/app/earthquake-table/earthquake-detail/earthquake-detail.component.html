@@ -1,0 +1,14 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Details for {{ earthquake?.place }}</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    Type: {{ earthquake.geometry.type }}
+  </mat-card-content>
+  <mat-card-content>
+    Coordinates:
+    <span *ngFor="let coordinate of earthquake?.geometry?.coordinates; let isLast=last">
+    {{ coordinate }}{{isLast ? '': ', '}}
+      </span>
+  </mat-card-content>
+</mat-card>
